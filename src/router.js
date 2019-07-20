@@ -21,8 +21,8 @@ const designRoutes = _designCurrRouterData.map(d => {
 })
 
 const _router = new Router({
-    mode: 'history',
-    base: process.env.BASE_URL,
+    // mode: 'history',
+    // base: process.env.BASE_URL,
     routes: [
         {
             path: '/',
