@@ -8,12 +8,17 @@ $asideWidth: 160px;
 }
 
 //  块级
-.block {
+.db {
     display: block !important;
 }
 //  行内
 .inline {
     display: inline-block !important;
+}
+
+// 隐藏
+.dn {
+    display: none;
 }
 
 //左对齐
@@ -35,14 +40,13 @@ $asideWidth: 160px;
     user-select: none;
 }
 
-// 隐藏
-.dn {
-    display: none;
-}
-
 // 透明度0
 .op0 {
     opacity: 0;
+}
+// 透明度1
+.op1 {
+    opacity: 1;
 }
 
 // 背景颜色白色

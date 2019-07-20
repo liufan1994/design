@@ -6,7 +6,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        loading: false
+        loading: false,
+        // 当前路由下数据
+        currDesignRouter: {},
+        // 当前路由下的当前tab数据
+        currRouterTab: {}
     },
     mutations: {
         save(state, [key, data, local = false]) {

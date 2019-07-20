@@ -59,7 +59,10 @@ module.exports = {
     },
     chainWebpack: config => {
         // 别名配置
-        config.resolve.alias.set('img', resolve('src/assets'))
+        config.resolve.alias
+            .set('img', resolve('src/assets'))
+            .set('design', resolve('src/assets/design'))
+            .set('common', resolve('src/assets/common'))
 
         // 压缩图片
         config.module
