@@ -49,6 +49,7 @@ const cdn = {
 module.exports = {
     outputDir: 'liufan',
     productionSourceMap: false,
+
     // SASS配置
     css: {
         loaderOptions: {
@@ -57,6 +58,7 @@ module.exports = {
             }
         }
     },
+
     chainWebpack: config => {
         // 别名配置
         config.resolve.alias
@@ -99,6 +101,7 @@ module.exports = {
             }
         }
     },
+
     configureWebpack: config => {
         // 生产环境配置
         if (isProduction) {
@@ -171,5 +174,7 @@ module.exports = {
                 }
             }
         }
-    }
+    },
+
+    publicPath: ''
 }
