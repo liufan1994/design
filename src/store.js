@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         loading: false,
-        // 当前路由下数据
+        // 当前路由的数据
         currDesignRouter: {},
         // 当前路由下的当前tab数据
         currRouterTab: {}

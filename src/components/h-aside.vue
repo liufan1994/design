@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 16:35:15
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-20 21:09:47
+ * @Last Modified time: 2019-07-21 11:31:57
  * @文件说明: 侧导航组件
  */
 <template>
@@ -18,14 +18,7 @@
 </template>
 
 <script>
-    export default {
-        name: 'h-aside',
-        data() {
-            return {
-                routerData: []
-            }
-        }
-    }
+    export default { name: 'h-aside' }
 </script>
 <style lang="scss" scoped>
     .h-aside {

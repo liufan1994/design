@@ -1,23 +1,38 @@
+/*
+ * @Author: hzq
+ * @Date: 2019-07-21 10:41:08
+ * @Last Modified by: hzq
+ * @Last Modified time: 2019-07-21 11:32:37
+ * @文件说明: 设计页的路由，可包含：web、手机端、平面、手绘、logo、等等
+ */
 const routerData = [
     {
-        // 路由中文名
+        // 用于路由中文名
         name: 'Web',
-        // 路由名称、path
+        // 用于路由名称、path，并且对应src/assets/design下的文件夹
         routerName: 'web',
-        // 渐变色1
+        // 用于【侧导航】-渐变色1
         color1: '#8adedd',
-        // 渐变色2
+        // 用于【侧导航】-渐变色2
         color2: '#6cf3da',
-        // 渐变角度
+        // 用于【侧导航】-渐变角度
         deg: '-52deg',
+        // 用于【头部】的背景色
         bgcolor: '#AAC2DE',
+        // 用于【头部】的tab显示
         children: {
+            // tab1对应图片路径assets/web/tab1
             tab1: {
+                // tab1的中文名
                 zhName: '熊来疯设计大赛官网',
+                // tab1的对应的头部数据
                 head: {
+                    // 标题
                     h2: '熊来疯设计大赛官网',
+                    // 描述
                     p:
                         '熊来疯设计大赛报名官网，设计围绕熊来疯主题进行设计，风格不限。由于需求比较抽象化，整个官网由名称“熊来疯”展开设计。',
+                    // 图片名称-该图片名称是指放在sec/assets/web/tab1下的表示头部的图片名称
                     img: 'img0'
                 }
             },

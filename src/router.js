@@ -5,7 +5,8 @@ import handImg from './tool/hand-img'
 
 Vue.use(Router)
 
-// 当前可用的路由
+// 当前可用的路由，从所有路由里面根据designCurrRouterName筛选出来的
+// 它的数据结构还是与designAllRouterData相同
 const _designCurrRouterData = designAllRouterData.filter(d => {
     return handImg.designCurrRouterName.includes(d.routerName)
 })
@@ -17,6 +18,7 @@ const designRoutes = _designCurrRouterData.map(d => {
         name: d.routerName,
         component: () => import('./views/design.vue')
     }
+
     return designRouter
 })
 
@@ -41,4 +43,5 @@ const _router = new Router({
 })
 
 export const router = _router
+// 导出当前可用的路由数据
 export const designCurrRouterData = _designCurrRouterData
