@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 16:35:15
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-21 11:31:57
+ * @Last Modified time: 2019-07-23 23:40:40
  * @文件说明: 侧导航组件
  */
 <template>
@@ -25,6 +25,7 @@
         position: fixed;
         top: 100px;
         right: 220px;
+        z-index: 99;
         .router-ul {
             position: relative;
             margin-top: 44px;

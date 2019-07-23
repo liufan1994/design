@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 16:35:15
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-20 22:39:47
+ * @Last Modified time: 2019-07-23 23:40:32
  * @文件说明: 作品内页
  */
 <template>
@@ -25,6 +25,9 @@
     .design-page {
         .img-warp {
             margin-top: 500px;
+            img {
+                max-width: 100%;
+            }
         }
     }
 </style>

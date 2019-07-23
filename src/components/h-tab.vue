@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-20 22:56:22
+ * @Last Modified time: 2019-07-23 23:33:24
  * @文件说明: 页面头部--tab组件
  */
 <template>
@@ -55,10 +55,10 @@
                 return currTabArr
             },
             currTabArrItem() {
-                const currTabArrItem = this.currTabArr[this.currTabIndex]||{}
-                console.log(currTabArrItem);
+                const currTabArrItem = this.currTabArr[this.currTabIndex] || {}
+                console.log(currTabArrItem)
 
-                if (currTabArrItem.head&&currTabArrItem.head.img) {
+                if (currTabArrItem.head && currTabArrItem.head.img) {
                     currTabArrItem.imgSrc = currTabArrItem.imgSrc.filter(img => {
                         return !img.match(currTabArrItem.head.img)
                     })

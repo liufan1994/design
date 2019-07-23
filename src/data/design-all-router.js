@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-21 10:41:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-21 11:32:37
+ * @Last Modified time: 2019-07-23 23:24:05
  * @文件说明: 设计页的路由，可包含：web、手机端、平面、手绘、logo、等等
  */
 const routerData = [
@@ -74,7 +74,25 @@ const routerData = [
         routerName: 'logo',
         color1: '#ecb1bd',
         color2: '#f5d3d8',
-        deg: '-52deg'
+        deg: '-52deg',
+        // 用于【头部】的tab显示
+        children: {
+            // tab1对应图片路径assets/web/tab1
+            tab1: {
+                // tab1的中文名
+                zhName: '熊来疯设计大赛官网',
+                // tab1的对应的头部数据
+                head: {
+                    // 标题
+                    h2: '熊来疯设计大赛官网',
+                    // 描述
+                    p:
+                        '熊来疯设计大赛报名官网，设计围绕熊来疯主题进行设计，风格不限。由于需求比较抽象化，整个官网由名称“熊来疯”展开设计。',
+                    // 图片名称-该图片名称是指放在sec/assets/web/tab1下的表示头部的图片名称
+                    img: 'img0'
+                }
+            }
+        }
     }
 ]
 export default routerData
