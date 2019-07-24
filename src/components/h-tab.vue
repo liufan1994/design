@@ -2,15 +2,17 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-23 23:33:24
+ * @Last Modified time: 2019-07-24 20:57:02
  * @文件说明: 页面头部--tab组件
  */
 <template>
     <ul class="h-tab flex-s f22 f">
-        <li v-for="(i,index) in currTabArr" :key="i.key" :class="{isCurrTab:currTabIndex===index}" @click="currTabIndex=index">
-            <div>{{i.zhName}}</div>
-            <div class="line" />
-        </li>
+        <template v-if="currTabArr.length">
+            <li v-for="(i,index) in currTabArr" :key="i.key" :class="{isCurrTab:currTabIndex===index}" @click="currTabIndex=index">
+                <div>{{i.zhName}}</div>
+                <div class="line" />
+            </li>
+        </template>
         <div class="dn">{{currTabArrItem}}</div>
     </ul>
 </template>
@@ -28,6 +30,9 @@
                 const currDesignRouter = this.$designCurrRouterData.find(d => {
                     return d.routerName === name
                 })
+                console.warn('currDesignRouter:======================')
+                console.log(currDesignRouter)
+                console.warn('currDesignRouter:======================')
 
                 let currTabArr = []
                 if (currDesignRouter) {
@@ -35,7 +40,7 @@
                         'currDesignRouter',
                         currDesignRouter
                     ])
-                    const currAllTab = currDesignRouter.children || []
+                    const currAllTab = currDesignRouter.children || {}
                     if (this.$objHasVal(currAllTab)) {
                         const currRouterImg = this.$designImgSrc[name]
                         for (const key in currRouterImg) {
@@ -51,13 +56,27 @@
                 } else {
                     throw new Error(`no find currDesignRouter in 【h-tab】`)
                 }
+                console.warn('currTabArr:======================')
+                console.log(currTabArr)
+                console.warn('currTabArr:======================')
 
                 return currTabArr
             },
             currTabArrItem() {
                 const currTabArrItem = this.currTabArr[this.currTabIndex] || {}
-                console.log(currTabArrItem)
 
+                if (!this.$objHasVal(currTabArrItem)) {
+                    // 当currTabArrItem为{}时，表明不需要子tab，所以将head、imgSrc等信息直接放入currRouterTab
+                    const { name } = this.$route
+                    const { currDesignRouter } = this.$store.state
+                    if (currDesignRouter.head) {
+                        currTabArrItem.head = currDesignRouter.head
+                        currTabArrItem.imgSrc = this.$designImgSrc[name]
+                    }
+                }
+                console.warn('currTabArrItem:======================')
+                console.log(currTabArrItem)
+                console.warn('currTabArrItem:======================')
                 if (currTabArrItem.head && currTabArrItem.head.img) {
                     currTabArrItem.imgSrc = currTabArrItem.imgSrc.filter(img => {
                         return !img.match(currTabArrItem.head.img)

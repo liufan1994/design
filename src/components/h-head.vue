@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-20 22:54:46
+ * @Last Modified time: 2019-07-24 20:54:00
  * @文件说明: 页面头部组件
  */
 <template>
@@ -11,15 +11,15 @@
         <div class="text-content mt16 align-r f">
             <div class="big-title">{{currDesignRouter.name}}</div>
             <template v-if="currRouterTab.head">
-            <div class="f24 mb30">{{currRouterTab.head.h2}}</div>
-            <div class="flex-e">
-                <p class="info f16">{{currRouterTab.head.p}}</p>
-            </div>
+                <div class="f24 mb30">{{currRouterTab.head.h2}}</div>
+                <div class="flex-e">
+                    <p class="info f16">{{currRouterTab.head.p}}</p>
+                </div>
             </template>
         </div>
-            <template v-if="currRouterTab.head">
-        <img v-if="currRouterTab.head.img" :key="currRouterTab.head.img" class="head-img" :src="require('design/'+currRouterTab.head.img)">
-            </template>
+        <template v-if="currRouterTab.head">
+            <img v-if="currRouterTab.head.img" :key="currRouterTab.head.img" class="head-img" :src="require('design/'+currRouterTab.head.img)">
+        </template>
     </div>
 </template>
 <script>
