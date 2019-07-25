@@ -2,6 +2,7 @@
     <div id="app">
         <h-aside/>
         <router-view />
+        <h-footer/>
     </div>
 </template>
 

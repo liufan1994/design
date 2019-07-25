@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-24 20:54:00
+ * @Last Modified time: 2019-07-25 21:16:05
  * @文件说明: 页面头部组件
  */
 <template>
@@ -13,7 +13,7 @@
             <template v-if="currRouterTab.head">
                 <div class="f24 mb30">{{currRouterTab.head.h2}}</div>
                 <div class="flex-e">
-                    <p class="info f16">{{currRouterTab.head.p}}</p>
+                    <p class="info f18">{{currRouterTab.head.p}}</p>
                 </div>
             </template>
         </div>
@@ -53,7 +53,7 @@
             }
             .info {
                 width: 530px;
-                line-height: 24px;
+                line-height: 1.6em;
                 text-align: justify;
                 text-align-last: right;
                 opacity: 0.6;

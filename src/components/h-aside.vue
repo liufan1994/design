@@ -2,12 +2,12 @@
  * @Author: hzq
  * @Date: 2019-07-20 16:35:15
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-23 23:40:40
+ * @Last Modified time: 2019-07-25 20:57:02
  * @文件说明: 侧导航组件
  */
 <template>
     <div class="h-aside">
-        <img class="cursor" src="~common/LF.png" alt="LF" width="60px" @click="$to('/')">
+        <img class="db cursor lf-img" src="~common/LF.png" alt="LF" @click="$to('/')">
         <div class="router-ul">
             <li v-for="i in $designCurrRouterData" :key="i.routerName" @click="$to('/'+i.routerName)">
                 <div class="color-block bdr4" :style="{background:`linear-gradient(${i.deg},${i.color1},${i.color2})`}"></div>
@@ -26,6 +26,9 @@
         top: 100px;
         right: 220px;
         z-index: 99;
+        .lf-img {
+            width: 60px;
+        }
         .router-ul {
             position: relative;
             margin-top: 44px;

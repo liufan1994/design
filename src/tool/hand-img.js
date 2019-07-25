@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 17:01:41
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-21 11:06:32
+ * @Last Modified time: 2019-07-25 22:39:47
  * @文件说明: 将assets/design文件夹下的图片处理为对象，然后赋值给Vue.prototype.$designImgSrc
  */
 

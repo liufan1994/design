@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-24 20:57:02
+ * @Last Modified time: 2019-07-25 21:19:29
  * @文件说明: 页面头部--tab组件
  */
 <template>
@@ -82,9 +82,20 @@
                         return !img.match(currTabArrItem.head.img)
                     })
                     if (currTabArrItem.head.img.split('/').length === 1) {
-                        currTabArrItem.head.img = currTabArrItem.imgSrc[0].replace(
-                            'img1',
-                            currTabArrItem.head.img
+                        currTabArrItem.head.img =
+                            currTabArrItem.imgSrc[0].substr(
+                                0,
+                                currTabArrItem.imgSrc[0].lastIndexOf('/') + 1
+                            ) +
+                            currTabArrItem.head.img +
+                            '.png'
+                        console.warn(
+                            'currTabArrItem.head.img:======================'
+                        )
+                        console.log(currTabArrItem.head.img)
+
+                        console.warn(
+                            'currTabArrItem.head.img:======================'
                         )
                     }
                 }
@@ -97,10 +108,12 @@
 </script>
 <style lang="scss" scoped>
     .h-tab {
+        height: 50px;
         padding-left: 60px;
         padding-top: 54px;
         li {
             margin-right: 110px;
+            @extend .align-c;
             @extend .cursor;
             &:hover {
                 .line {
