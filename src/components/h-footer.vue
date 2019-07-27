@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2018-08-28 17:45:25
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-25 21:53:13
+ * @Last Modified time: 2019-07-27 21:16:56
  * @文件说明: 首页-尾部组件
  */
 <template>
@@ -21,7 +21,7 @@
                 <li @click="copy" class="left-li email cursor" data-clipboard-text='liufan94@163.com' title="点击复制邮箱">邮箱：liufan94@163.com</li>
             </ul>
             <div class="right">
-                <h-button width="1.66666rem" v-if="$route.name==='home'||$route.name==='about-me'" @click.native="goto">我的简历</h-button>
+                <h-button width="1.66666rem" v-if="$route.name==='home'||$route.name==='about'" @click.native="gotoResume">我的简历</h-button>
                 <div v-else class="to-top cursor" @click="toTop(10)">
                     <img class="img db" src="~common/to-top.png">
                     <div class="text">回到顶部</div>
@@ -45,13 +45,9 @@
                 showCopy: ''
             }
         },
-        // deactivated() {
-        //     this.toTop(1)
-        // },
         methods: {
             toTop(rate = 10) {
                 let top1 = 0
-                // let top2 = 0
                 let scrollToptimer = setInterval(() => {
                     top1 =
                         document.body.scrollTop ||
@@ -66,15 +62,10 @@
                     if (top1 === 0) {
                         clearInterval(scrollToptimer)
                     }
-                    // top2 =
-                    //     document.body.scrollTop ||
-                    //     document.documentElement.scrollTop
                 }, 50)
             },
-            goto() {
-                return false
-                // let href = location.origin + location.pathname + '#/resume'
-                // window.open(href)
+            gotoResume() {
+                // window.open('https://liufan1994.github.io/resume/index.html')
             },
             copy() {
                 var clipboard = new Clipboard('.email')

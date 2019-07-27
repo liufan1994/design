@@ -2,12 +2,13 @@
  * @Author: hzq
  * @Date: 2019-07-20 16:35:15
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-25 22:48:10
+ * @Last Modified time: 2019-07-27 19:35:53
  * @文件说明: 作品内页
  */
 <template>
     <div class="design-page">
         <h-head/>
+        <h-aside/>
         <div class="img-warp align-c">
             <img v-for="i in currRouterTab.imgSrc" :key="i" :src="require('design/'+i)" :alt="i">
         </div>

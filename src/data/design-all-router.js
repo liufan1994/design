@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-21 10:41:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-25 20:14:56
+ * @Last Modified time: 2019-07-27 20:45:40
  * @文件说明: 设计页的路由，可包含：web、手机端、平面、手绘、logo、等等
  */
 const routerData = [
@@ -73,7 +73,7 @@ const routerData = [
         }
     },
     {
-        name: '插画 动画 平面',
+        name: '动画',
         routerName: 'plane',
         color1: '#e9b3cb',
         color2: '#f6d5dd',

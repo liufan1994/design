@@ -1,12 +1,8 @@
 <template>
     <div id="app">
-        <h-aside/>
-        <router-view />
+        <keep-alive exclude="home">
+            <router-view />
+        </keep-alive>
         <h-footer/>
     </div>
 </template>
-
-<style lang="scss">
-    #app {
-    }
-</style>

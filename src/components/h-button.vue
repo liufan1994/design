@@ -29,7 +29,7 @@
         },
         methods: {
             gopage() {
-                if (this.router) this.$router.push(this.router)
+                if (this.router) this.$to(this.router)
             }
         }
     }

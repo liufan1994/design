@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-25 21:19:29
+ * @Last Modified time: 2019-07-27 21:05:23
  * @文件说明: 页面头部--tab组件
  */
 <template>
@@ -26,7 +26,8 @@
         },
         computed: {
             currTabArr() {
-                const { name } = this.$route
+                let { name } = this.$route
+                if (name === 'home') name = this.$designCurrRouterData[0].routerName
                 const currDesignRouter = this.$designCurrRouterData.find(d => {
                     return d.routerName === name
                 })

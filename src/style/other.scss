@@ -58,12 +58,13 @@ $asideWidth: 160px;
 @mixin bgi(
     $url: '~@/assets/logo.png',
     $size: cover,
-    $p: center,
+    $x: center,
+    $y: center,
     $r: no-repeat
 ) {
     background-image: url($url);
     background-size: $size;
-    background-position: $p;
+    background-position: $x $y;
     background-repeat: $r;
 }
 .bgi {
