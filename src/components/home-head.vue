@@ -7,7 +7,7 @@
  */
 <template>
     <div class='home-header flex-b'>
-        <div class="left" @click="$to('/home')">
+        <div class="left cursor" @click="$to('/')">
             <p class="wel c6 f28">welcome to</p>
             <img class="title-name db" src="~home/title-name.png">
             <div class="ui flex-s f36 c3">

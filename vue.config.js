@@ -28,8 +28,8 @@ const cdn = {
         js: [
             'https://cdn.staticfile.org/vue/2.6.10/vue.min.js',
             'https://cdn.staticfile.org/vuex/3.0.1/vuex.min.js',
-            'https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js',
-            'https://cdn.staticfile.org/vue-router/3.0.3/vue-router.min.js'
+            'https://cdn.staticfile.org/vue-router/3.0.3/vue-router.min.js',
+            'https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js'
         ]
     }
 }

@@ -46,7 +46,7 @@
 
 <style lang='scss' scoped>
     .home {
-        @include bgi('~home/home-bg.png', cover, left, bottom);
+        // @include bgi('~home/home-bg.png', cover, left, bottom);
         overflow: hidden;
         .content {
             width: 1200px;
