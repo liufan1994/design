@@ -5,6 +5,7 @@ import store from './store'
 import handImg from './tool/hand-img'
 import vueMethods from './tool/methods'
 import componentsGlobal from './components/global'
+import './icons'
 
 Vue.use(handImg)
 Vue.use(vueMethods, router)
