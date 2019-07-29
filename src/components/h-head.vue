@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2019-07-20 18:25:08
  * @Last Modified by: hzq
- * @Last Modified time: 2019-07-25 21:16:05
+ * @Last Modified time: 2019-07-30 00:01:48
  * @文件说明: 页面头部组件
  */
 <template>
@@ -63,7 +63,7 @@
             position: absolute;
             bottom: -300px;
             left: -200px;
-            height: 650px;
+            width: 900px;
         }
     }
 </style>
