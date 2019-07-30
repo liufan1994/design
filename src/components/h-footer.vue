@@ -65,7 +65,7 @@
                 }, 50)
             },
             gotoResume() {
-                // window.open('https://liufan1994.github.io/resume/index.html')
+                window.open('https://liufan1994.github.io/design/ui.pdf')
             },
             copy() {
                 var clipboard = new Clipboard('.email')
